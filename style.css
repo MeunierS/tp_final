@@ -35,7 +35,8 @@ body
 
 #bloc_page
 {
-    width: 900px;
+    /*width: 900px;*/
+    width: auto;
     margin: auto;
 }
 
@@ -54,6 +55,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    width: auto;
 }
 
 #titre_principal
@@ -125,7 +127,7 @@ nav a:hover
     margin-top: 15px;
     height: 200px;
     border-radius: 5px;
-    background: url('images/sanfrancisco.jpg') no-repeat;
+    background: url('images/sanfrancisco.jpg') no-repeat center/100%;
     position: relative;
     box-shadow: 0px 4px 4px #1c1a19;
     margin-bottom: 25px;
@@ -289,4 +291,64 @@ footer h1
 {
     text-decoration: none;
     color: #760001;
+}
+
+/*responsive design*/
+/* small */
+@media only screen and (max-width: 300px) {
+    body {
+        font-size:1rem;
+    }
+    #block_page{
+        width: 100%;
+        margin:0; 
+        border:none;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #listes_amis{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+    #banniere_image{
+        background: url('images/sanfrancisco.jpg') no-repeat /100%;
+    }
+}
+/* medium */
+
+@media only screen and (min-width: 301px) and (max-width: 768px){
+    body {
+        font-size:1.2rem;
+    }
+    #block_page{
+        width: 100%;
+        margin:0; 
+        border:none;
+    }
+    #listes_amis{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+    #banniere_image{
+        background: url('images/sanfrancisco.jpg') no-repeat /100%;
+    }
+}
+/* large */
+@media only screen and (min-width: 769px) {
+    body {
+        font-size:1.5rem;
+    }
+    header{
+        background: url('images/separateur.png') repeat-x bottom;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
 }
